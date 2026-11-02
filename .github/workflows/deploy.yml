@@ -1,20 +1,36 @@
-name: Deploy to GitHub Pages
+name: Test and deploy to GitHub Pages
 
 on:
   push:
     branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: write
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: 20
+          cache: npm
+
       - run: npm install
-      - run: npm run build
-      - uses: peaceiris/actions-gh-pages@v3
+
+      - name: Run tests
+        run: npm test -- --watchAll=false
+
+      - name: Build
+        run: npm run build
+
+      - name: Deploy
+        if: github.event_name == 'push'
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build

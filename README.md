@@ -1,115 +1,110 @@
-# 📋 Project Kickoff Template
+# Project Kickoff
 
-An interactive, flowchart-style project planning template built in React — designed to help developers structure new projects with clarity before writing a single line of code.
+**Plan it before you build it.**
 
-> **Built for developers who want to maximize every session and ship with confidence.**
+A free, private planner for the earliest stage of a project. Walk through seven short steps, see how ready your plan is, and export it in the format your team or AI tool actually uses.
 
----
+**[Open the app →](https://antdia4309.github.io/project-kickoff)**
 
-## 🚀 Live Demo
-
-[View the live template →](https://antdia4309.github.io/portfolio)
-
----
-
-## 📌 Overview
-
-This template walks you through six essential phases every project should define upfront. Fill out each phase, copy the output to your clipboard, and paste it as the opening message of your AI-assisted development session — or use it as your own internal project brief.
+<!-- Add a screenshot: save one as docs/screenshot.png and uncomment the line below -->
+![Project Kickoff screenshot](docs/screenshot.png)
 
 ---
 
-## 🗂️ Template Phases
+## Why it exists
 
-| Phase | Name | Purpose |
-|-------|------|---------|
-| 01 | **Project Identity** | Define the problem, audience, and success criteria |
-| 02 | **Tech & Constraints** | Lock in your stack, file structure, and conventions |
-| 03 | **Scope Definition** | Separate must-haves from nice-to-haves |
-| 04 | **Session Breakdown** | Break work into atomic, focused sessions |
-| 05 | **Decision Authority** | Define what can be decided vs. what needs sign-off |
-| 06 | **Context & Output** | Surface existing code context and preferred deliverables |
+Spec-driven tools like GitHub Spec Kit and Kiro start where the code starts. Project Kickoff starts where the idea starts.
 
----
+- **Private by default.** Everything runs in your browser. Answers are saved on your device and never sent anywhere. No account, no install, no AI calls.
+- **Built for business folks and developers alike.** Plain-language steps a product owner can fill in, with output a developer or coding agent can use straight away.
+- **One plan, many formats.** Write it once, then export to whatever tool comes next.
 
-## ✨ Features
+## The seven steps
 
-- ✅ Collapsible phase cards with smooth toggle
-- ✅ Per-phase progress bars tracking field completion
-- ✅ One-click **Copy to Clipboard** — exports a clean, structured text brief
-- ✅ **Expand All / Collapse All** controls
-- ✅ **Clear All** to reset and start fresh
-- ✅ Fully responsive, dark-mode UI
+| Step | What you define |
+|------|-----------------|
+| 1. Identity | The problem, who it's for, and what success looks like |
+| 2. Tech & constraints | Stack, structure, design system, conventions |
+| 3. Scope | What's in, what's out, and in what order |
+| 4. Work plan | The work broken into small sessions |
+| 5. Decisions | What can be decided freely, what needs a check-in, what's off limits |
+| 6. Risks & questions | Assumptions, dependencies, risks, open questions |
+| 7. Context | Existing code and the output you want back |
 
----
+Fields marked with a yellow dot are the minimum for a usable brief.
 
-## 🛠️ Tech Stack
+## Readiness check
 
-- **React** (Hooks)
-- **Tailwind CSS** utility classes
-- No external dependencies beyond React
+![Readiness check screenshot](docs/readiness.png)
 
----
+Before you export, Project Kickoff scores your plan from 0 to 100 using simple rules, no AI involved. It flags things like:
 
-## 📦 Getting Started
+- Success criteria with no number, time limit, or threshold
+- An empty out-of-scope section
+- More than eight must-haves
+- No guardrails for what needs a check-in
+- Vague words such as "fast," "easy," "user-friendly," or "seamless"
 
-### Clone the repo
+Each issue links straight to the step where you can fix it.
+
+## Export formats
+
+![Export screenshot](docs/export.png)
+
+| Format | Use it for |
+|--------|-----------|
+| Kickoff brief (`.md`) | Your first message to any AI assistant, or a team handoff |
+| `CLAUDE.md` | Project memory for Claude Code |
+| `AGENTS.md` | Coding agents that follow the AGENTS.md convention |
+| Cursor rule (`.mdc`) | `.cursor/rules/` in your repo |
+| Jira epic | In-scope items become acceptance criteria, sessions become stories |
+| Stakeholder summary | A plain-language recap for email or Teams |
+
+Every format can be copied or downloaded.
+
+## Run it locally
 
 ```bash
-git clone https://github.com/antdia4309/project-kickoff-template.git
-cd project-kickoff-template
-```
-
-### Install dependencies
-
-```bash
+git clone https://github.com/antdia4309/project-kickoff.git
+cd project-kickoff
 npm install
-```
-
-### Run locally
-
-```bash
 npm start
 ```
 
----
+Run the tests with `npm test`. Pushing to `main` runs the tests, builds the app, and deploys it to GitHub Pages.
 
-## 🧠 How to Use It
-
-1. Open the template
-2. Work through each phase top to bottom
-3. Fill in every field relevant to your project
-4. Hit **Copy to Clipboard**
-5. Paste the output as your first message when starting a new dev session
-
-The exported brief gives any AI assistant (or collaborator) everything they need to hit the ground running — no back-and-forth, no half-baked context.
-
----
-
-## 📁 Project Structure
+## Project structure
 
 ```
-project-kickoff-template/
-├── src/
-│   └── App.jsx          # Main template component
-├── public/
-│   └── index.html
-├── package.json
-└── README.md
+project-kickoff/
+├── .github/workflows/deploy.yml   # Test, build, and deploy to GitHub Pages
+├── public/                        # index.html, icons, manifest
+└── src/
+    ├── App.js                     # The app: steps, readiness check, exports, styles
+    ├── App.test.js                # Tests
+    └── index.js                   # Entry point
 ```
 
----
+## Built with
 
-## 🙋 Author
+React 19, Create React App, and Lucide icons. Fonts: Bricolage Grotesque and Instrument Sans.
+
+## Roadmap
+
+- Ready-to-paste prompts for each work session
+- Share a plan with a link, no backend needed
+- Re-import an exported brief to keep editing it
+- A simple decision log
+
+## Author
 
 **Antonio Diaz**
 Business Analyst → Software Developer
-B.S. Computer Information Science — ECPI University (Summa Cum Laude, 4.0 GPA)
+B.S. Computer Information Science, ECPI University (Summa Cum Laude, 4.0 GPA)
 
-- 🌐 Portfolio: [antdia4309.github.io/portfolio](https://antdia4309.github.io/portfolio)
-- 💻 GitHub: [@antdia4309](https://github.com/antdia4309)
+- Portfolio: [antdia4309.github.io/portfolio](https://antdia4309.github.io/portfolio)
+- GitHub: [@antdia4309](https://github.com/antdia4309)
 
----
+## License
 
-## 📄 License
-
-MIT — free to use, adapt, and build on.
+MIT. Free to use, adapt, and build on. See [LICENSE](LICENSE).

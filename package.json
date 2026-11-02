@@ -2,6 +2,7 @@
   "name": "project-kickoff",
   "homepage": "https://antdia4309.github.io/project-kickoff",
   "version": "0.1.0",
+  "license": "MIT",
   "private": true,
   "dependencies": {
     "@testing-library/dom": "^10.4.1",
