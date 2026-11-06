@@ -99,8 +99,8 @@ React 19, Create React App, and Lucide icons. Fonts: Bricolage Grotesque and Ins
 ## Author
 
 **Antonio Diaz**
-Business Analyst → Software Developer
-B.S. Computer Information Science, ECPI University (Summa Cum Laude, 4.0 GPA)
+Business Analyst
+B.S. Computer Information Science - Software Development, ECPI University (Summa Cum Laude, 4.0 GPA)
 
 - Portfolio: [antdia4309.github.io/portfolio](https://antdia4309.github.io/portfolio)
 - GitHub: [@antdia4309](https://github.com/antdia4309)
